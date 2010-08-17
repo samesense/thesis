@@ -7,7 +7,7 @@ between proteins \cite{han04}. These protein-protein interaction (PPI)
 networks have two types of nodes, hubs and non-hubs
 \cite{barabási2004network}. Characterizing protein nodes in this
 manner happened after PPI networks were observed to be scale-free,
-i.e.\, the distribution of the number of proteins each network protein
+i.e.\ the distribution of the number of proteins each network protein
 interacts with follows a power law where a small percentage of network
 proteins have the majority of interactions in the network
 \cite{jeong2001lethality}. These highly connected network proteins are
@@ -100,7 +100,7 @@ yeast and human \cite{taylor09,fraser05}. Intermodular hubs provide
 temporally and spatially constricted connections between intramodular
 hubs, which serve as components of cell machinery \cite{fraser05}.
 These connections allow intermodular hubs to direct macromolecular
-complexes in a time and space dependent manner. These intermodular hub
+complexes in a time and space dependent manner. Intermodular hub
 proteins have been found to be larger than intramodular hub proteins,
 and have more unique domains and peptide binding motifs than
 intramodular hubs \cite{taylor09}. Intramodular hubs have been found
@@ -154,11 +154,12 @@ preference into a few testable hypotheses for future studies.
 \includegraphics[scale=0.5]{figs/hubs_overlap}
 \end{center}
 \caption[Comparing hubs across human interaction networks]{\small In
-  this study we used three human networks, I2D, STRING, and HPRD. To
-  find hubs for each network, we took the top 20\% most connected
-  nodes. Each network had a different hub set due to differing network
-  size and connectivity. Here we show the overlap between hub sets for
-  the three networks. \label{fig:sysBio:hubOverlap}}
+  this study we used three human interaction networks, I2D, STRING,
+  and HPRD. To find hubs for each network, we took the top 20\% most
+  connected nodes. Each network had a different hub set due to
+  differing network size and connectivity. Here we show the overlap
+  between hub sets for the three
+  networks. \label{fig:sysBio:hubOverlap}}
 \end{figure}
 
 \subsection{Hub classification}
@@ -316,7 +317,7 @@ To further study the viruses, we turned to small interfering RNA
 \cite{bushman09,yeung09,Li09,konig2009human}. In these screens, host
 genes were knocked down in virus infected cells, and the effect on the
 virus is observed. Genes whose expression depletion negatively
-affected the virus were recorded as VDF hits, i.e.\, host factors that
+affected the virus were recorded as VDF hits, i.e.\ host factors that
 are required by the virus \cite{bushman09}. For HIV, we merged results
 from four siRNA screens that searched for VDFs required for HIV
 replication \cite{bushman09,yeung09}. These datasets of had few genes
@@ -352,12 +353,12 @@ instead of the average when summarizing hub neighbor co-expression. If
 the degree difference between inter/intramodular hubs was causing the
 hub distinction, using the median instead of the average would solve
 this problem by removing the influence of outliers in a hub's
-collection of neighbor co-expression correlations, and controlling for
-hub degree. Using the median instead of the average did not produce
-qualitatively different results for virus-host protein interactions
-(Table \ref{tbl:sysBio:bindingFisher}). For the siRNA data, the
-association between HCV host dependency factors and intramodular hubs
-became significant (Table \ref{tbl:sysBio:rnaiFisher}).
+collection of neighbor co-expression correlations. Using the median
+instead of the average did not produce qualitatively different results
+for virus-host protein interactions (Table
+\ref{tbl:sysBio:bindingFisher}). For the siRNA data, the association
+between HCV host dependency factors and intramodular hubs became
+significant (Table \ref{tbl:sysBio:rnaiFisher}).
 
 \input{tables/sysBio2}
 
@@ -469,7 +470,7 @@ functionally annotating virus proteins based on their host binding
 partners. In single organisms networks, proteins that interact with
 each other are often in the same cellular pathways, and share the same
 functions \cite{segal2003discovering}. This observation has been used
-to annotate proteins with unknown function with the functions of
+to annotate proteins of unknown function with the functions of
 proteins with which they interact
 \cite{karaoz2004whole,sharan2007network}. This annotation method has
 been extended to virus-host networks, annotating virus proteins based
