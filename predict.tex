@@ -220,7 +220,7 @@ study because extensive study at the molecular level has yielded
 nearly fifteen hundred HIV targeted human proteins, covering nearly
 four thousand experimentally determined HIV-human interactions, which
 are cataloged in the NCBI HIV-Human Protein Interaction Database. We
-predict virus-host interactions based PPIs mediated by short
+predict virus-host interactions based on PPIs mediated by short
 eukaryotic linear motifs (ELMs) \cite{puntervoll03} on HIV proteins
 and human protein counter domains (CDs) known to interact with these
 ELMs. It has been estimated that 15\% to 40\% of host protein
@@ -720,9 +720,9 @@ interactions with human proteins. First, we found the GO molecular
 function level 5 labels that were enriched in our predicted virus
 targeted human proteins, and then calculated the enrichment for the
 host proteins in the validated NCBI HIV-human interactions. Table
-\ref{tbl:medGen2:GO} shows that GO molecular functions for which our
-prediction's host proteins were significantly enriched (p-value $<$
-0.01) were also enriched in validated HIV targets.
+\ref{tbl:medGen2:GO} shows that GO molecular functions enriched on
+predicted virus targets were also enriched on validated HIV targets
+(p-value $<$ 0.01).
 
 \input{tables/medGen_table3}
 
@@ -756,7 +756,7 @@ evaluation of our predictions that involved more defined biological
 pathways from the KEGG pathway database. The KEGG pathways
 statistically enriched for HIV ENV, NEF, and TAT interacting proteins
 (experimental as well as computational) included immune system
-pathways such as T-cell and B-cell receptor signaling pathways,
+pathways such as T cell and B cell receptor signaling pathways,
 apoptosis, focal adhesion, and toll-like receptor signaling pathways
 (Table \ref{tbl:medGen1:KEGG}). Gene expression data before and after
 HIV infection of macrophages also showed apoptosis and MAPK signaling
@@ -807,33 +807,35 @@ pathway. Our predictions were on target on the cell membrane for
 HLA-B, HLA-A3, HLA-B45, and FAS, but we missed Perforin, HLA-C, HLA-E,
 and HLA-G1. The figure also shows a good match for DNA transcription
 factors targeted by HIV. The green boxes in the figure correspond to
-host proteins with apparently no direct interaction with TAT.
+host proteins with apparently no direct interaction with TAT. The
+T cell receptor signaling pathway in Figure \ref{fig:medGen:fig6} had
+a high degree of overlap (purple) along the cell membrane and on
+transcription factors between TAT targeted host proteins (red) and our
+corresponding predictions (blue). The abundance of predicted host
+proteins in the pathway with no matching experimental result suggested
+new virus-host interaction studies for HIV as well as a justification
+for further refinement of our computational method, perhaps by
+incorporating protein structures \cite{doolittle2010structural}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.25]{figs/medGen_6}
 \end{center}
-\caption[HIV TAT T-cell receptor signaling pathway]{\small HIV TAT T
-  cell receptor signaling pathway. The KEGG T-cell receptor signaling
+\caption[HIV TAT T cell receptor signaling pathway]{\small HIV TAT T
+  cell receptor signaling pathway. The KEGG T cell receptor signaling
   pathway is colored for predicted TAT-human interactions (blue) and
   validated TAT-human interactions (red), and their overlap
   (purple). Green boxes have proteins not involved in infection, while
   white boxes do not have human proteins. \label{fig:medGen:fig6}}
 \end{figure}
 
-The cytokines shown in red at the right hand side of the KEGG diagram
-in Figure \ref{fig:medGen:fig5} would not be expected to appear in our
-predicted list. They are documented in the NCBI database as interacting
-with HIV, but their interactions with virus proteins are probably not
-direct, but via transcriptional regulation. The T-cell receptor
-signaling pathway in Figure \ref{fig:medGen:fig6} had a high degree of
-overlap (purple) along the cell membrane and on transcription factors
-between TAT targeted host proteins (red) and our corresponding
-predictions (blue). The abundance of predicted host proteins in the
-pathway with no matching experimental result suggested new virus-host
-interaction studies for HIV as well as a justification for further
-refinement of our computational method, perhaps by incorporating
-protein structures \cite{doolittle2010structural}.
+%% The cytokines shown in red at the right hand side of the KEGG diagram
+%% in Figure \ref{fig:medGen:fig5} would not be expected to appear in our
+%% predicted list. They are documented in the NCBI database as interacting
+%% with HIV, but their interactions with virus proteins are probably not
+%% direct, but via transcriptional regulation. 
+
+
 
 %%  Since our predictions might be used in this way,
 %% we decided to evaluate only our predictions that were present in KEGG
@@ -862,7 +864,8 @@ significant as we limited predictions to proteins in KEGG pathways
 pathways produced a set of virus-host interactions with less false
 positives, so we decided to restrict our predictions further by
 finding KEGG pathways that were enriched with human proteins from
-predicted HIV-human, and keeping only predictions in these pathways.
+predicted HIV-human interactions, and keeping only predictions in
+these pathways.
 
 Viruses often target specific host pathways, like the type I
 interferon response pathway, and interact with multiple host proteins
@@ -883,9 +886,9 @@ restricted to the KEGG pathways in which they are enriched with
 verified interactions for HIV ENV, NEF, and TAT. Compared to limiting
 our predictions to proteins in all KEGG pathways, restricting
 predictions for HIV ENV and NEF to proteins in KEGG pathways that were
-statistically enriched with human proteins in our virus-host
-prediction for these HIV proteins (p-value $<$ 0.01) improved the
-overlap between predicted and verified virus-host interactions.
+statistically enriched with human proteins in our virus-host predicted
+interactions for these HIV proteins improved the overlap between
+predicted and verified virus-host interactions.
 
 %% The p-values indicated a statistically significant match between
 %% predicted and experimental sets for ENV, NEF, and TAT when using both
@@ -989,19 +992,19 @@ could be used to capture interactions with other HIV proteins.
   HIV-human interaction prediction]{\small Here we tested the
   hypothesis that using infrequent host peptide motifs for HIV-human
   interaction prediction, rather than all host peptide motifs
-  conserved on HIV proteins improved the performance of our
+  conserved on HIV proteins, improved the performance of our
   predictions. We found infrequent host peptide motifs by limiting
-  conserved HIV peptide motifs to those that occurred on less than some
-  fraction (Frac) of human proteins, or were seen on an HIV protein
-  with another peptide motif within a twenty residue window, resulting
-  in a motif module. For HIV proteins ENV, NEF, and TAT, we compared
-  the performance of predictions using two human fraction cutoffs,
-  0.25 and 0.5, to predictions made with unrestricted conserved HIV
-  peptide motifs (Conserved ELMs). We found significant overlap
-  (Match) between predicted and validated virus-host interactions in
-  all cases, but using the fraction cutoffs only helped for the HIV ENV
-  protein.  P-values were calculated as described in
-  Methods. \label{fig:medGen:fig8}}
+  conserved HIV peptide motifs to those that occurred on less than
+  some fraction (Frac) of human proteins, or were seen on an HIV
+  protein with another peptide motif within a twenty residue window,
+  resulting in a motif module. For HIV proteins ENV, NEF, and TAT, we
+  compared the performance of predictions using two human fraction
+  cutoffs, 0.25 and 0.5, to predictions made with unrestricted
+  conserved HIV peptide motifs (Conserved ELMs). We found significant
+  overlap (Match) between predicted and validated virus-host
+  interactions in all cases, but using the fraction cutoffs only
+  helped for the HIV ENV protein.  P-values were calculated as
+  described in Methods. \label{fig:medGen:fig8}}
 \end{figure}
 
 %This was true when we looked at all
@@ -1027,10 +1030,10 @@ occur in together, limiting ELMs to those occurring in modules
 decreased the false positive pattern matches for ELMs. 
 
 We identified ELM modules conserved on more than 70\% of each HIV
-protein's multiple alignment, as we did for ELMs. We found the
-fraction of human proteins with each ELM or ELM module, and chose two
-fraction cutoffs, 0.25 and 0.50, to restrict the ELMs and ELM modules
-on virus proteins to those that were infrequent on human
+protein's multiple sequence alignment, as we did for ELMs. We found
+the fraction of human proteins with each ELM or ELM module, and chose
+two fraction cutoffs, 0.25 and 0.50, to restrict the ELMs and ELM
+modules on virus proteins to those that were infrequent on human
 sequences. Any ELM or ELM module with a human frequency above the
 cutoff was not used to predict interactions. Figure
 \ref{fig:medGen:fig8} shows the results for HIV proteins ENV, NEF, ad
@@ -1076,7 +1079,7 @@ KEGG pathways, and of these we matched 241 in the set of 877
 experimentally verified proteins with a p-value of 3.11e-58 (Figure
 \ref{fig:medGen:fig7}). Our predictions were not nearly an exact match
 for experimental data, but our list was highly enriched with HIV
-targeted host proteins. Given reducing our total virus-host
+targeted host proteins. Given that reducing our total virus-host
 predictions to those with human proteins in KEGG pathways removes
 roughly half of the interactions, and has a stronger overlap with
 verified virus-host interactions, experimentalists should begin
@@ -1163,8 +1166,8 @@ database of revised Pfam domains is currently under development
 
 Emerging peptide motif discovery tools will help researchers improve
 the specificity of the motifs that mediate virus-host interactions, a
-task which is difficult because motifs are small and variable, with as
-few as two sites in a peptide motif may be important for activity
+task which is difficult because motifs are small and variable. As few
+as two sites in a peptide motif may be important for activity
 \cite{edwards07}. The assumption made by peptide motif discovery tools
 is that proteins that interact with a given protein will have
 over-represented peptide motifs that cause their common interaction
@@ -1211,7 +1214,7 @@ interactions between the HIV and human proteins. Our method used
 multiple sequence alignments of HIV proteins, and three datasets
 related to the host: sequences of the host proteins, a priori
 knowledge of experimentally observed protein-protein interactions
-within the host proteome, and interactions between short linear
+within the host proteome, and associations between short linear
 peptide motifs and protein domains. The output of the model was a list
 of host proteins that may interact with specific HIV proteins using
 specific sites. This list can be used to draft a connectivity map
@@ -1250,7 +1253,7 @@ other gene level biological interactions, such as the siRNA screens,
 to formulate hypothesis about specific roles of HIV-human
 interactions. Specifically, the predicted HIV-human interactions with
 human proteins that are implicated in an siRNA screen can be tested to
-see if preventing the interaction has an affect on HIV replication.
+see if preventing the interaction has an effect on HIV replication.
 
 In addition to predicting virus-host interactions, this study
 predicted virus targeted host pathways (Table
@@ -1267,15 +1270,15 @@ might need to target.
 
 The methodology applied here for HIV-host protein interactions is
 applicable to any viruses with multiple sequence alignments and hosts
-with known interactomes. Therefore, our approach has potential use in
-the identification of host proteins targeted by recently discovered
-and less studied viruses. The resulting list will be useful for
-guiding further virus-host interaction experiments, selecting optimal
-drug therapies, and discovering new antivirus drugs. The systems
-approach presented here for predicting virus-host protein interactions
-will benefit from ongoing research on the more specific annotations of
-short linear motifs and domains involved in protein-protein
-interactions.
+with known interaction networks. Therefore, our approach has potential
+use in the identification of host proteins targeted by recently
+discovered and less studied viruses. The resulting list will be useful
+for guiding further virus-host interaction experiments, selecting
+optimal drug therapies, and discovering new antivirus drugs. The
+systems approach presented here for predicting virus-host protein
+interactions will benefit from ongoing research on the more specific
+annotations of short linear motifs and domains involved in
+protein-protein interactions.
 
 
 

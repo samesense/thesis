@@ -15,7 +15,7 @@ indicating their importance in cellular signaling pathways
 MAPK ERK1 interacts with five HIV proteins \cite{fu09}, and MAPK ERK2
 has interactions with ten HIV proteins \cite{kolch2005coordinating},
 and both kinases participate in multiple cellular processes, it is
-likely that it and ERK1 and ERK2 are involved in many steps of HIV
+likely that it ERK1 and ERK2 are involved in many steps of HIV
 infection \cite{ptak08}.
 
 \subsection{MAPK and HIV infection}
@@ -29,11 +29,12 @@ allow the HIV pre-integration complex to translocate to the nucleus,
 where viral replication can proceed \cite{bukrinskaya96}. Nef and Tat
 have been shown to induce the ERK MAPK cascade
 \cite{toschi06,schrager02}. ERK1 and ERK2 phosphorylate HIV Nef, Rev,
-and Tat in vitro \cite{yang99}, but the roles of these phosphorylation
-events in HIV infectivity remain unknown \cite{yang98}. The inhibition
-of MAPK phosphorylation has been shown to decrease HIV infectivity,
-indicating that MA and Vif MAPK-directed phosphorylation events might
-make good drug targets \cite{yang99,bukrinskaya96}.
+and Tat \textit{in vitro} \cite{yang99}, but the roles of these
+phosphorylation events in HIV infectivity remain unknown
+\cite{yang98}. The inhibition of MAPK phosphorylation has been shown
+to decrease HIV infectivity, indicating that MA and Vif MAPK-directed
+phosphorylation events might make good drug targets
+\cite{yang99,bukrinskaya96}.
 
 \subsection{MAPK substrate docking} 
 
@@ -312,7 +313,7 @@ interact with MAPK (Figure \ref{fig:plos1:fig1} and Table
 \ref{tbl:plosONE2:percents}). As with the Dc motif, we found the
 conservation of the Dd motif on HIV MAPK substrates to be significant
 (p-value $<$ 0.05) when compared to Dd motif conservation on random
-protein sequences(see Methods).
+protein sequences (see Methods).
 
 %% This significant conservation of docking motifs was not observed for
 %% the standard docking motifs Da and Db for all HIV MAPK substrates.
@@ -380,7 +381,7 @@ further experimentation.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.8]{figs/plos1_4}
+\includegraphics[scale=0.6]{figs/plos1_4}
 \end{center}
 \caption[MAPK substrate hierarchy]{\small Here we present UPGMA
   clustering of HIV MA proteins and ERK1/2 substrates by pairwise
@@ -471,22 +472,22 @@ motifs, Dc, was statistically enriched among the binding partners of
 ERK1/2. However, the lack of statistical enrichment does not exclude
 the possibility of the Dd motif being used as a docking site as well.
 
-Current drugs target MAPK activity, but new drugs based on the HIV
-MAPK docking sites might work better. Existing MAPK drugs, like
-SB203580, SB202190, and RWJ67657 do not target ERK1/2. FR180204 does
-target ERK1/2 activity via the ATP binding site, making it susceptible
-to off target effects. New drugs targeting HIV replication by blocking
-ERK1/2 phosphorylation of MA and Vif could in theory be incorporated
-into existing therapy regimens, making it more difficult for an HIV
-strain to acquire the mutations for resistance to all drugs
+Current drugs target MAPK kinase activity, but new drugs based on the
+HIV MAPK docking sites might work better. Existing MAPK drugs, like
+SB203580, SB202190, and RWJ67657 do not target ERK1/2. FR180204
+targets ERK1/2 activity via the ATP binding site, making it
+susceptible to off target effects. New drugs targeting HIV replication
+by blocking ERK1/2 phosphorylation of MA and Vif could in theory be
+incorporated into existing therapy regimens, making it more difficult
+for an HIV strain to acquire the mutations for resistance to all drugs
 \cite{deeks03}. By targeting MAPK docking sites, rather than ATP
 binding sites, drugs can offer more specificity. There is hope that
 few ERK1/2 substrates will be targeted by drugs specific to HIV
 docking sequences. Amino acid sequences used by virus and host in the
-Dc motif were significantly different (Figure \ref{fig:plos1:fig2} and
-Figure \ref{fig:plos1:fig3}) to allow for specific targeting of HIV
-proteins with drugs. Moreover, the poor structural alignment of HIV MA
-and other ERK1/2 substrates suggests that HIV specific targeting is
+Dc motif were different enough (Figure \ref{fig:plos1:fig2} and Figure
+\ref{fig:plos1:fig3}) to allow for specific targeting of HIV proteins
+with drugs. Moreover, the poor structural alignment of HIV MA and
+other ERK1/2 substrates suggests that HIV specific targeting is
 possible.
 
 \section{Conclusion}
@@ -562,7 +563,7 @@ probabilities to sample subsequent amino acids and build the rest of
 the random protein sequence until it was as long as the real one.
 
 We made one hundred sets of random MA protein sequences, each
-containing 987 random Nef sequences, and matched all proteins in each
+containing 987 random MA sequences, and matched all proteins in each
 set against patterns for the Dc and Dd docking sites. For each random
 protein set, we calculated the conservation of the proposed docking
 sites across random MA protein sequences in the set, and compared this
@@ -574,18 +575,18 @@ docking site was equal to or greater than the conservation observed
 for real MA protein sequences. We found that both Dc and Dd docking
 site motifs were significantly conserved compared to random protein
 sequences (p-value $<$ 0.05), i.e.\ the proposed docking motifs had
-conservation on real MA protein sequences than on random protein
-sequences in more than 95 of the random sequence sets. Using a similar
-control for HIV Nef, Rev, Tat, and Vif proteins, we found Dc and Dd
-motifs to be significantly conserved for all HIV MAPK substrates,
-which made it more likely that they were guiding interactions with
-MAPKs ERK1 and ERK2.
+higher conservation on real MA protein sequences than on random
+protein sequences in more than 95 of the random sequence sets. Using a
+similar control for HIV Nef, Rev, Tat, and Vif proteins, we found Dc
+and Dd motifs to be significantly conserved for all HIV MAPK
+substrates, which made it more likely that they were guiding
+interactions with MAPKs ERK1 and ERK2.
 
 \subsection{Structure analysis}
 
 We performed a BLAST \cite{altschul90} search on the Protein Data Bank
 (PDB) \cite{berman02} to identify known ERK1/2 substrate protein
-structures (E-value threshold of E-10). We collected the proteins that
+structures (E-value threshold of 1e-10). We collected the proteins that
 had less than 150 residues, to be comparable to HIV MA in size, and
 only kept the top hit in each BLAST result set. A pairwise structural
 alignment of each of three MA structures [PDB$\colon$1hiw,
