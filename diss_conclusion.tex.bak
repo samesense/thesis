@@ -59,7 +59,7 @@ Our prediction work has generated hypotheses about new virus targeted
 host pathways and provided a list of host proteins whose interactions
 with virus proteins may be essential for HIV replication. The cell
 cycle, Jak-STAT, cytoskeletal regulation, and tight junction KEGG
-pathways were all significantly enriched in our predicted interacting
+pathways were all significantly enriched in our predicted interacing
 proteins for some HIV protein, but the corresponding enrichment was
 not significant for the validated virus-host interactions from
 NCBI. These pathways offer new hypotheses for cell processes that HIV
