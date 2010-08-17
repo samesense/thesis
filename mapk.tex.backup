@@ -137,8 +137,8 @@ drug design perspective using multiple alignments of HIV protein
 sequences taken from different patients, and classified according to
 subtype. We find that only HIV Nef has docking site pattern hits that
 cover the majority of protein sequences of the most common HIV
-subtypes (A1, B, and C). However, the structure of Nef and our \textit{in
-silico} simulations show that docking at these site is unlikely. Some
+subtypes (A1, B, and C). However, the structure of Nef and our in
+silico simulations show that docking at these site is unlikely. Some
 of the most frequently observed subtypes of HIV proteins MA, Tat, and
 Vif are missing the docking pattern most often observed in eukaryotic
 MAPK substrates, whereas HIV Rev does not show the docking pattern on
@@ -147,7 +147,7 @@ or strain, independent manner, we impose slight revisions on the MAPK
 docking patterns described in the ELM Resource. One such revised motif
 is present in all major subtypes of HIV proteins known to be
 phosphorylated by ERK1/2, and is statistically enriched among the
-substrates of ERK1/2. The use of \textit{in silico} docking indicates the
+substrates of ERK1/2. The use of in silico docking indicates the
 plausibility of the candidate motifs as HIV protein docking sites for
 ERK1. Our results provide a first step towards identifying the docking
 site motifs on HIV proteins and await experimental verification.
@@ -250,7 +250,7 @@ phosphorylation by ERK1 and ERK2 could be explained by a standard
 docking site. However, after examining a map of solvent inaccessible
 residues on Nef \cite{arold2001dynamic}, we found that the Db motif
 hit had its last residue in a buried region of the protein. Further
-investigation using \textit{in silico} docking revealed that both the Nef Da
+investigation using in silico docking revealed that both the Nef Da
 and Db motif hits could not serve as MAPK docking sites (see
 Methods). Docking at these sites placed the MAPK active site too far
 from the three possible phosphorylation sites on Nef (Figure
@@ -260,7 +260,7 @@ from the three possible phosphorylation sites on Nef (Figure
 \begin{center}
 \includegraphics[scale=0.9]{figs/plos1_new_6}
 \end{center}
-\caption[Docking between MAPK ERK1 and HIV Nef]{\small \textit{In silico}
+\caption[Docking between MAPK ERK1 and HIV Nef]{\small In silico
   docking of MAPK ERK1 (red) and HIV Nef (blue) at the MAPK docking
   groove (cyan) and the standard docking motif hit on Nef (green) did
   not align the active site of ERK1 (yellow) with any of the three
@@ -363,7 +363,7 @@ one, and was not statistically enriched among ERK1/2 substrates (Table
 \subsection{Candidate docking motifs on HIV Nef}
 
 Focusing on ERK1/2 phosphorylation of HIV Nef, we found that neither
-of the standard Da and Db docking motifs were supported by \textit{in silico}
+of the standard Da and Db docking motifs were supported by in silico
 docking (see Methods), and the Db motif failed the solvent
 accessibility test. This suggested that one of our alternative docking
 motifs could serve as a potential docking site. Using the solvent
@@ -372,7 +372,7 @@ likely MAPK docking site candidates, as each one had at least one
 buried residue. Only the initial N-terminal Dd pattern hit did not
 overlap with a buried residue. Unfortunately, we were unable to find a
 Nef protein structure that had both this Dd pattern hit and the
-proposed Nef phosphorylation sites, so \textit{in silico} docking could not be
+proposed Nef phosphorylation sites, so in silico docking could not be
 performed. Testing the functionality of this proposed site awaits
 further experimentation.
 
@@ -412,7 +412,7 @@ showing binding between ERK1/2 and HIV MA.
 \begin{center}
 \includegraphics[scale=0.4]{figs/plos1_5}
 \end{center}
-\caption[Docking between MAPK ERK1 and HIV MA]{\small \textit{In silico} docking was
+\caption[Docking between MAPK ERK1 and HIV MA]{\small In silico docking was
   performed using ZDOCK by forcing ERK1 (red) to dock at the Dc and Dd
   motifs on HIV MA (blue). In the upper panel, docking was forced to
   occur between the hydrophobic tail of the Dc motif on MA and the
@@ -426,7 +426,7 @@ showing binding between ERK1/2 and HIV MA.
   site.  \label{fig:plos1:fig5}}
 \end{figure}
 
-We next performed \textit{in silico} docking between HIV MA and ERK1 using the
+We next performed in silico docking between HIV MA and ERK1 using the
 ZDOCK server \cite{chen03}. ZDOCK allows users to force binding
 between specific residues. The top panel of Figure
 \ref{fig:plos1:fig5} shows ERK1 docked with MA when binding was forced
@@ -464,7 +464,7 @@ biochemical characteristics with motifs used by human proteins that
 bind to MAPKs. The Dc motif was missing one basic residue form the
 standard docking motifs, while the Dd motif was missing the
 hydrophobic portion. The Dd motif had experimental support on human
-proteins, while the Dc motif did not. \textit{In silico} docking experiments
+proteins, while the Dc motif did not. In silico docking experiments
 provided evidence supporting the hypothesis that these motifs function
 as MAPK docking sites along HIV proteins. One of these candidate
 motifs, Dc, was statistically enriched among the binding partners of
@@ -506,7 +506,7 @@ U.S.\ Food and Drug Administration approved small-molecule drugs that
 prevent protein-protein interactions
 \cite{parthasarathi2008approved}. Using our proposed complex of MAPK
 ERK1 and the HIV matrix protein (MA), approved small-molecule drugs
-can be screen \textit{in silico} to find those that disrupt the docking between
+can be screen in silico to find those that disrupt the docking between
 ERK1 and HIV MA. Further annotation of the proposed docking motifs
 awaits experimental verification.
 
