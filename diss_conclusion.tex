@@ -1,0 +1,318 @@
+\chapter{Reflections and perspectives} \label{chapter:conclusion}
+
+In this dissertation, we presented three projects that introduced new
+observations about the nature of virus-host networks and generated
+testable hypothesis for further virus-host network discoveries. In the
+first project, we showed that host pathways targeted by HIV could be
+predicted using peptide motifs on HIV sequences. Our HIV-human
+interaction models have predicted new pathways and interactions that
+may be important for HIV infection. In our second project, we examined
+the docking between HIV proteins and human mitogen-activated protein
+kinases, which may be important for HIV replication, and proposed
+docking sites on HIV substrates that can be evaluated in the lab. In
+our third project, we contributed to the network biology field by
+addressing the observation that viruses target host network hub
+proteins, and asking if viruses had a preferential interaction with
+intermodular or intramodular hubs. By demonstrating a preference of
+intramodular hubs over intermodular hubs for HIV and influenza virus,
+we aided the systems study of biological networks by providing more
+evidence for the distinction between intermodular and intramodular
+hubs, which is currently under debate
+\cite{taylor09,batada06,batada07,agarwal09,han04}. Furthermore,
+the virus intramodular hub preference promotes the study of which
+intramodular hub properties are important for viral infection. In this
+final chapter, we review the work presented in this dissertation and
+address how it can be used as a basis for future investigations of
+virus-host networks.
+
+% the third result seems a bit weak
+
+\section{Review of our work}
+
+\subsubsection{Prediction of HIV virus-host protein interactions using virus and host sequence motifs}
+
+In Chapter \ref{chapter:predict} we presented a peptide motif based
+virus-host interaction prediction method, and tested its ability to
+accurately recover HIV-human interactions listed in the NCBI HIV-Human
+Protein Interaction Database \cite{fu09,ptak08}. We motivated our work
+by outlining the importance of predicted virus-host interactions for
+guiding experimental studies of virus-host interactions
+\cite{skrabanek2008computational,jansen2003bayesian,lee2004probabilistic}. The
+virus-host networks that emerge from virus-host interaction
+experiments have been used to annotate virus proteins of unknown
+function and compare different viral strategies for dealing with the
+host immune system \cite{navratil-system,calderwood07}. We showed that
+our predicted interactions had significant overlap with interactions in
+the NCBI database, and that virus targeted proteins from our
+predictions overlapped significantly with a set of host proteins that
+are important for HIV replication \cite{bushman09}. Our HIV-human
+interaction predictions were further validated in that the human
+proteins in the interactions occupied many of the same biological
+pathways as the human proteins shown to be targeted by HIV in the
+validated NCBI interactions. We showed that our predicted virus
+targeted proteins were also enriched in some pathways not known to interact
+with HIV, providing new potential directions for the study of
+virus-host networks. Our work for this chapter has been further
+summarized in a review by Chan et al.\ \cite{chan09}.
+
+Our prediction work has generated hypotheses about new virus targeted
+host pathways and provided a list of host proteins whose interactions
+with virus proteins may be essential for HIV replication. The cell
+cycle, Jak-STAT, cytoskeletal regulation, and tight junction KEGG
+pathways were all significantly enriched in our predictions for some
+HIV protein, but the corresponding enrichment was not significant for
+the validated virus-host interactions from NCBI. These pathways offer
+new hypotheses for cell processes that HIV might need to
+target. Combining the predicted virus-host interactions with the
+results form siRNA screens searching for host factors that are
+important for HIV replication also leads to new hypotheses. Predicted
+virus targeted proteins that are implicated in an siRNA screen can be
+tested to see if preventing the interaction has an affect on HIV
+replication.  Furthermore, we have identified several protein binding
+sites on host and virus proteins that may be guiding HIV-human
+interactions that are essential for replication. Following up on the
+proposed virus-host interactions important for replication and the
+suggested virus targeted pathways will help construct a more complete
+HIV-human interaction network that can facilitate future HIV studies.
+
+%% This chapter has also raised questions about the nature
+%% of HIV-human interactions. While evaluating our predictions, we
+%% observed that including our predicted first level interactors as well
+%% as our predictions for second level interactors performed better than
+%% using the first level interactors alone. Our validation set includes
+%% both protein binding and regulatory information. Perhaps the second
+%% level interactors are being regulated by HIV proteins, while the first
+%% level interactors are binding with HIV proteins.
+
+\subsubsection{A bioinformatics approach reveals possible MAPK docking motifs on HIV proteins}
+
+In Chapter \ref{chapter:mapk} we continued our work with the
+hypothesis that virus proteins use host peptide motifs to interact
+with host proteins, and focused on the peptide motif that acts as a
+substrate docking site for mitogen-activated protein kinases (MAPKs)
+ERK1 and ERK2 \cite{bardwell09}. Our work with MAPK and virus proteins
+was motivated by the importance of MAPK phosphorylation of HIV
+substrates MA and Vif in infection \cite{yang99,bukrinskaya96}. We
+observed that HIV proteins MA, Rev, Tat, and Vif, while documented to
+be phosphorylated by ERK1 and ERK2, were missing the accepted MAPK
+docking motif. The HIV Nef protein had hits for the MAPK docking motif
+pattern, but further investigation of Nef's structure suggested that
+these sites were not functional. We revealed that modifications of the
+accepted MAPK docking motif pattern would yield peptide motif patterns
+that annotated all HIV proteins phosphorylated by ERK1 and ERK2. As an
+argument that our proposed docking motifs were functional, we showed
+that they were enriched on human MAPK ERK1 and ERK2 substrates, and we
+demonstrated that in silico docking of MAPK ERK1 and HIV MA via the
+proposed docking site produced a protein complex that aligned the
+active site of ERK1 with a possible phosphorylation site on MA. The
+locations of our proposed docking motifs on HIV proteins serve as
+testable sites that mediate MAPK and HIV protein interactions. If
+functional, our proposed docking sites will aid in the search for
+small-molecule drugs that prevent HIV protein phosphorylation by MAPKs
+ERK1 and ERK2.
+
+The work in this chapter is important for future work with virus-host
+interactions. First, it serves as outline of computational steps for
+the modification and verification of host peptide motif for use on
+virus proteins. Second, this chapter motivates more questions
+concerning the presence of host peptide motifs on virus proteins. Are
+there other peptide motifs, like the MAPK docking site, that are
+variations of documented host peptide motifs? How is the virus
+utilization of variant host peptide motif patterns beneficial to the
+virus? Answering these questions will yield more insights into the
+nature of virus-host networks.
+
+\subsubsection{Modularity in protein interaction network hubs predicts viral host-pathogen interactions}
+
+In Chapter \ref{chapter:hubs} we bridged the gap between studies of
+hubs in single organism networks and work done with virus-host
+networks to determine if host hub modularity, i.e., the presence of
+two hub types in networks, played a role in virus-host
+interactions. We reaffirmed the debated existence of intermodular and
+intramodular hubs in single organism networks using three human
+protein-protein interaction networks, and confirmed some of the
+properties that have been observed for intermodular and intramodular
+hubs, such as the preference of intramodular hubs to be parts of
+proteins complexes \cite{fraser05}. We showed that the despite being
+debated \cite{taylor09,batada06,batada07,agarwal09,han04}, the
+inter/intramodular hub distinction is important for network systems
+biology by demonstrating that HIV and influenza virus proteins have a
+significant interaction preference for intramodular hubs. We ended
+this chapter by proposing that the virus intramodular hub preference
+is caused by a virus preference to interact with hubs that are part of
+host protein complexes.
+
+The virus intramodular hub preference described in this work promotes
+questions about the features of host proteins that are targeted by
+viruses. Intramodular hubs evolve at slower rates
+\cite{fraser2005modularity}, and are more structured than intermodular
+hubs
+\cite{ekman2006properties,singh2007role,tokuriki2009viral}. Perhaps
+viruses are targeting these hub features in addition to the
+intramodular hub complex feature. More work should be done to
+investigate the importance of these intramodular hub features in
+guiding virus protein preference.
+
+\section{Future work}
+The work outlined here will help with future studies of virus-host
+networks. In addition to the experimental work suggested above, our
+work motivates other computational studies. Here we introduce four
+promising computational extensions to this work.
+
+\subsubsection{Predicting virus-host integrations using peptide motifs and additional information}
+
+One of the draw backs of predicting virus-host interactions using
+peptide motifs is the high number of false positive predictions. This
+problem can be alleviated by including additional information. Some of
+this information is provided virus protein structures. HIV protein
+structures have already been used to predict virus-human interactions
+\cite{doolittle2010structural}. The peptide motif method can be
+supplemented by this work where virus protein structures are
+available. The peptide motif method can also easily fit into a
+prediction method that utilizes virus-host network motifs
+\cite{hivNetMotifs}. Network motifs are over-represented patterns of
+interaction involving two or more proteins. Network motifs have been
+successfully used to predict yeast protein interactions
+\cite{albert2004conserved}. It is likely that combining a similar
+approach using virus-host network motifs with the peptide motif based
+interaction prediction method will be able to predict virus-host
+interactions with fewer false positives.
+
+\subsubsection{Database of HIV mutations and their effects on virus-host interactions}
+
+Another fault of the peptide motif based virus-host interaction
+prediction method is the lack of evidence that an individual peptide
+sequence is responsible for a virus-host protein interaction. In the
+first aim of the dissertation, we showed that the conservation of
+peptide motifs on the HIV Nef protein sequences was not due to chance,
+and used this significant conservation to argue that conserved peptide
+motifs on HIV proteins were mediating virus-host interactions. In the
+second aim of the dissertation, we proposed that the statistical
+enrichment of a peptide motif on the interaction neighbors of a
+protein was evidence that the peptide motif was being used in
+interactions with some neighbor proteins.
+
+The task of finding functional peptide motifs would be simplified if
+there was a database of mutations on virus proteins and their effects
+on virus-host interactions, identifying the functional motif hits
+would be much easier. The NCBI HIV-Human Interaction Database has some
+of the information needed to make such a database, but it is poorly
+organized. A database of HIV protein mutations can be built by taking
+all the source articles from the NCBI database, mining them for
+paragraphs mentioning mutations and virus-host interactions, and then
+having a large community of biologists annotation of these paragraphs
+with information describing the mutation and its effect on virus-host
+interactions. Using these virus mutations to find functional peptide
+motifs, and using functional peptide motifs with structure and network
+guides would make a better model of virus-host interactions.
+
+\subsubsection{Investigating the role of virus proteins as intermodular hubs in host protein interaction networks}
+
+Highly connected proteins in the human protein interaction network
+come in two types, intermodular hubs that modulate the activities of
+human complexes, and intramodular hubs that play important roles in
+these complexes \cite{han04,taylor09}. When combined with other
+studies of virus proteins, the work in this dissertation motivates the
+hypothesis that virus proteins act as intermodular hub proteins in
+virus-host networks. There is much evidence to support this
+claim. First, a study of influenza-human interactions revealed that
+influenza proteins had more interactions with host proteins than
+expected by chance, indicating that virus proteins might be hub
+proteins in the virus-host interaction network
+\cite{shapira2009physical}. Second, in Chapter \ref{chapter:hubs} we
+demonstrated that HIV and influenza proteins prefer to interact with
+intramodular hubs. We suggested that this hub preference was actually
+a preference to interact with host protein complexes, which is the
+same preference seen for intermodular hubs. Third, intermodular hubs
+are highly unstructured, or disordered, proteins compared to
+intramodular hubs \cite{ekman2006properties,singh2007role}. It has
+been observed that 25 RNA virus proteins with structures available in
+the Protein Data Bank \cite{berman02} had large regions of protein
+disorder \cite{tokuriki2009viral}. Specific cases of virus protein
+disorder involved the HIV Rev and matrix proteins
+\cite{turner1999structural,goh2008protein}. The basic protein segment
+of HIV Rev that binds HIV RNA is unstructured when alone in solution,
+but adopts an $\alpha$-helix when bound to RNA
+\cite{turner1999structural}. The HIV matrix protein is highly
+disordered, and this might help the virus in evading the immune system
+\cite{goh2008protein}. Fourth, intermodular hubs have more peptide
+motifs than intramodular hubs \cite{taylor09}. In Chapter
+\ref{chapter:predict}, we showed that not only do virus proteins have
+many conserved host peptide motifs, but these motifs are possibly
+functional because they can be used to predict interactions with virus
+proteins.
+
+Testing the hypothesis that virus proteins act as intermodular hubs in
+the virus-host network is important because it has implications for
+antiviral therapies. Disordered proteins must be tightly regulated in
+host cells because their binding promiscuity makes then highly
+sensitive to changes in their concentration
+\cite{vavouri2009intrinsic,gsponer2008tight}. There is evidence that
+concentration changes also affect HIV infection. In an HIV infected
+cell, HIV proteins Env, Nef, and Vpu regulate the presence of the HIV
+CD4 receptor at the cell's membrane
+\cite{levesque2004role}. Downregulating the HIV CD4 receptor at the
+cell's membrane is thought to decrease the chance of reinfection by
+more HIV virions, which would stress the host cell's pathways without
+resulting in the production of more virus particles
+\cite{arold2001dynamic,harris1999hiv}. CD4 downregulation by HIV hints
+that the tight regulation of HIV protein expression is necessary for
+successful replication. More extensive investigation is needed to
+validate this hypothesis and develop methods to alter virus protein
+regulation for therapy purposes.
+
+\subsubsection{Examining the effects of host environment on influenza virus peptide motif usage}
+
+Influenza virus has the ability to infect a number of host organisms,
+including human, chicken, swine, and horse. Nucleotide sequences of
+the 2009 H1N1 pandemic influenza have been shown to have a substitution
+bias that depends on the host organism in which it resides
+\cite{solovyov2010host}. Based on our work in Chapters
+\ref{chapter:predict} and \ref{chapter:mapk}, we propose a project to
+examine the possibility of an influenza virus peptide motif usage bias
+that correlates with host organism. Our results in Chapter
+\ref{chapter:predict} suggested that peptide motifs on virus proteins
+are important for guiding virus-host protein interactions. Case
+studies focusing on single peptide motifs on certain virus proteins
+have shown that some virus proteins use host peptide motifs to
+interact with host proteins to accomplish necessary steps in the viral
+life-cycle \cite{kadaveru08}. Regions of some influenza proteins have
+already been found to evolve differently in different hosts. The
+identities of four amino acids in an influenza polymerase component
+have been found to differ consistently between mammalian and avian
+hosts, and it has been suggested that these differences affect
+interactions with host proteins \cite{yamada2010biological}. In light
+of the importance of peptide motifs for virus-host interactions, we
+suggest conducting a study of differential peptide motif usage among
+influenza viruses infection mammalian and avian hosts. Such a study
+will give insights into the selective pressures on influenza proteins,
+which can aid in drug design and the determination of which organism
+an influenza strain has originated.
+
+%% Here we demonstrate that the usage of peptide motifs differs between
+%% influenza groups and host organisms. We show that an influenza group's
+%% peptide motif profile if closest that of its host.
+
+%% Peptide sequence usage has been used to profile prokaryotic proteomes,
+%% and the distances between profiles accuratly recovers the known
+%% prokaryotic phylogeny \cite{jun2010whole}.
+
+%% Host disordered proteins have more peptide motifs than other
+%% proteins \cite{gsponer2009rules}.
+
+%% In addition to better prediction methods, more having more virus-host
+%% interaction data will allow different 
+
+%% Our work on HIV and peptide motifs has been reviewed
+%% \cite{chan09}.
+
+%% Next steps will include the investigation of the role of host
+%% microRNAs (miRNAs) in the virus host network, where host miRNAs can
+%% modulate the virus gene expression \cite{ghosh2009cellular}.
+
+%% Our work can also be extended to study hosts other than human. A
+%% forward-genetic screen has identified 57 E. coli genes needed for
+%% lambda phage replication \cite{maynard2010forward}. The study of
+%% bacteria-virus interactions is useful because of the symbiotic
+%% relationship that exists in human intestines, which may determine
+%% human diet \cite{citeulike:7479351}.

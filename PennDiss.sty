@@ -1,0 +1,170 @@
+% University of Pennsylvania thesis style
+% Dept. of Computer Information and Science
+%
+% Last edit Tue Nov. 19 12:00:00 2002
+% Last edit by Gang Huang
+% Modification of:
+%
+% penndiss.sty
+% PENNDISS DOCUMENT-STYLE OPTION - released July, 1988
+% for LaTeX version 2.09
+% Author: Haim Levkowitz (modified from the Stanford U. style)
+% University of Pennsylvania PhD thesis style -- option to the report style
+% Note: This file is the .STY file. The file penndiss.DOC serves as
+% documentation.
+% Whenever there are discrepancies between the two file,
+% this is the CORRECT thing. It has been fine-tuned for the precise
+% margin requirement. It ``passed the test'' on Friday, July 29, 1988, when
+% my dissertation, formated with it, was accepted.
+% Haim Levkowitz, July 30, 1988.
+% For an example, see [levkowitz.clr]dissroot.tex
+
+\makeatletter \oddsidemargin 0.5in \evensidemargin 0.5in
+\marginparwidth 40pt \marginparsep 10pt \topmargin 0pt \headsep
+0in \textheight 8.5in \textwidth 5.9375in \voffset=-.125in
+%\hoffset=.0625in %shifts text 1/16 in to the right
+\flushbottom \brokenpenalty=10000
+\renewcommand{\baselinestretch}{1.5}
+%\renewcommand{\baselinestretch}{1.0}
+%\def\cl@chapter{\@elt{section}\@elt{footnote}}
+%\def\thefigure{\@arabic\c@figure}
+%\def\thetable{\@arabic\c@table}
+%\def\theequation{\arabic{equation}}
+\def\@xfloat#1[#2]{\ifhmode \@bsphack\@floatpenalty -\@Mii\else
+  \@floatpenalty-\@Miii\fi\def\@captype{#1}\ifinner
+  \@parmoderr\@floatpenalty\z@
+  \else\@next\@currbox\@freelist{\@tempcnta\csname ftype@#1\endcsname
+    \multiply\@tempcnta\@xxxii\advance\@tempcnta\sixt@@n
+    \@tfor \@tempa :=#2\do
+           {\if\@tempa h\advance\@tempcnta \@ne\fi
+             \if\@tempa t\advance\@tempcnta \tw@\fi
+             \if\@tempa b\advance\@tempcnta 4\relax\fi
+             \if\@tempa p\advance\@tempcnta 8\relax\fi
+           }\global\count\@currbox\@tempcnta}\@fltovf\fi
+  \global\setbox\@currbox\vbox\bgroup
+  \def\baselinestretch{1}\@normalsize
+  \boxmaxdepth\z@
+  \hsize\columnwidth \@parboxrestore}
+\long\def\@footnotetext#1{\insert\footins{\def\baselinestretch{1}\footnotesize
+    \interlinepenalty\interfootnotelinepenalty
+    \splittopskip\footnotesep
+    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+    \hsize\columnwidth \@parboxrestore
+    \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}\@makefntext
+                       {\rule{\z@}{\footnotesep}\ignorespaces
+                         #1\strut}}}
+\def\dept#1{\gdef\@dept{#1}}
+\def\superviser#1{\gdef\@superviser{#1}}
+\def\supervis@r{Superviser}
+\def\supervisor#1{\gdef\@superviser{#1}\gdef\supervis@r{Supervisor of Dissertation}}
+\def\groupchair#1{\gdef\@groupchair{#1}\gdef\groupcha@r{Graduate Group Chairperson}}
+\def\submitdate#1{\gdef\@submitdate{#1}}
+%\def\copyrightyear#1{\gdef\@copyrightyear{#1}} % \author, \title in report
+\def\@title{}\def\@author{}\def\@dept{computer and information science}
+\def\@superviser{}%
+\def\@groupchair{}%
+\def\@submitdate{\ifcase\the\month\or January\or February\or March\or April\or May\or June\or July\or August\or
+  September\or October\or November\or December\fi \space \number\the\year}
+%%\ifnum\month=12
+%% \@tempcnta=\year \advance\@tempcnta by 1
+%% \edef\@copyrightyear{\number\the\@tempcnta}
+%%\else
+%#\def\@copyrightyear{\number\the\year}
+%%\fi
+\newif\ifcopyright \newif\iffigurespage \newif\iftablespage
+%%\copyrighttrue
+\figurespagetrue \tablespagetrue
+%Define the signature format
+\long\def\signature#1{%
+   \begin{flushleft}
+  %%\begin{center}
+    % \begin{minipage}{6in}
+    \parindent=0pt
+    \shortstack[l]{\vrule width 3in height 0.4pt\\#1}
+    % \end{minipage}
+  %%\end{center}
+   \end{flushleft}
+}
+\def\titlep{%
+  \thispagestyle{empty}%
+  \null\vskip.1in%
+  \begin{center}
+    {\Large\uppercase\expandafter{\@title}}
+    \vskip.2in%
+    {\Large\expandafter{\@author}}
+    \vskip.2in%
+    A DISSERTATION \\
+%%    A DISSERTATION PROPOSAL\\
+    \vskip.2in%
+    in
+    \vskip.2in%
+    {\Large\expandafter{\@dept}}
+    \vfill
+    Presented to the Faculties of the University of Pennsylvania\\
+    in Partial Fulfillment of the Requirements for the \\
+    Degree of Doctor of Philosophy\\
+    \vskip.2in{2010}
+  \end{center}
+  %\vskip.3in%
+  \vfill
+  \supervis@r\\
+  \signature{ \@superviser, Associate Professor, CIS}
+  \vskip.3in%
+%  \vfill\vfill
+  \groupcha@r\\
+  \signature{\@groupchair, Professor, Genetics}
+  \vskip.3in%
+  {\sc Dissertation Committee}\\
+  Frederic Bushman, Professor of Microbiology \\
+  Sridhar Hannenhalli, Associate Professor of Genetics \\
+  Sara Cherry, Assistant Professor of Microbiology \\
+  Aydin Tozeren, Professor of Biomedical Engineering, Drexel University \\
+  \newpage}
+\def\copyrightpage{%
+  \thispagestyle{empty}%
+  \null\vfill
+  \begin{center}
+    \Large COPYRIGHT\\
+    \@author\\
+    \@copyrightyear
+  \end{center}
+  \vfill\newpage}
+\def\beforepreface{%
+  \pagenumbering{roman}%
+  \pagestyle{plain}%
+  \titlep%
+  \ifcopyright\copyrightpage\fi}
+\def\prefacesection#1{%
+  \pagestyle{plain}%
+  \chapter*{#1}
+  \addcontentsline{toc}{chapter}{#1}}
+\def\abstractp{%
+  \begin{center}
+    {\uppercase{ABSTRACT}}\\
+    {\uppercase\expandafter{\@title}} \\
+    {\@author} \\
+    {\@superviser}\\
+  \end{center}
+}
+\def\afterpreface{\newpage
+  \tableofcontents
+  \newpage
+  \iftablespage
+      {\addvspace{10pt}
+        \let\saveaddvspace=\addvspace
+        \def\addvspace##1{}
+        \listoftables
+        \let\addvspace=\saveaddvspace}
+      \newpage
+      \fi
+      \iffigurespage
+          {\addvspace{10pt}
+            \let\saveaddvspace=\addvspace
+            \def\addvspace##1{}
+            \listoffigures
+            \let\addvspace=\saveaddvspace}
+          \newpage
+          \fi
+          \pagenumbering{arabic}
+          \pagestyle{plain}}
+% Start with pagestyle{plain} in case front matter isn't processed \pagestyle{plain} \makeatother

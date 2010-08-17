@@ -1,0 +1,80 @@
+  \subsection{Human interactome}
+    We converted the human I2D (accessed October 2009), human STRING
+    (version 8.2), and HPRD (release 8) interactomes to networks of
+    Entrez Gene IDs using ID mapping provided by UniProt
+    \cite{citeulike:6008733}, gProfiler \cite{reimand2007g}, and
+    NCBI's eutils. Network hubs were found for each interactome
+    separately by locating the lowest degree in the top 20\% of
+    connected genes, and taking all genes with at least this
+    degree. Bimodal curves for each interactome's hub average PCC
+    distribution were found using gradient descent to minimize the
+    log-likelihood of a binned distribution. The number of bins for
+    each distribution was determined by dividing the total number of
+    data points by a bin divisor. For individual networks, we used a
+    bin divisor of 11 for I2D and 10 for STRING and HPRD. For
+    distributions made using hubs present in at least two networks, we
+    fit a bimodal curve using a bin divisor of 6 for STRING and 9 for
+    I2D and HPRD.
+
+  \subsection{Virus-host interactomes}
+    We gathered HIV-human protein interactions from NCBI and
+    VirusMINT. Both virus-host interaction datasets label interactions
+    by type. We focused on interaction types describing direct protein
+    interactions, or modifications. We used VirusMINT interactions
+    labeled with MINT interaction IDs 0006 (anti bait
+    coimmunoprecipitation), 0007 (anti tag coimmunoprecipitation),
+    0018 (two hybrid), 0019 (coimmunoprecipitation), 0027
+    (cosedimentation), 0045 (experimental interaction detection), 0096
+    (pull down), 0416 (fluorescence microscopy), 0424 (protein kinase
+    assay), 0435 (protease assay), 0515 (methyltransferase assay),
+    0889 (acetylation assay). For the NCBI database, we used
+    acetylated by, acetylates, binds, cleaved by, cleaves, degraded
+    by, degrades, dephosphorylates, methylated by, myristoylated by,
+    phosphorylated by, phosphorylates, ubiquitinated by edges. We
+    gathered HIV siRNA results from two sources covering four studies,
+    and converted these hits to Entrez Gene IDs. Three studies were
+    summarized in Table 4 of the supplementary document supplied by
+    Bushman et al.\ at http://www.hostpathogen.org
+    \cite{bushman09}. The fourth study was taken from Figure S2 in an
+    article by Yeung et al. \cite{yeung09}.
+
+    HCV-human protein interactions were taken from de Chassey et
+    al. \cite{dechassey08}. HCV siRNA results were taken as genes that
+    showed a decrease in infection, listed in supplementary material
+    SD1 and SD2 columns B-E \cite{Li09}.
+
+    Influenza-human protein interactions and siRNA hits were taken
+    from a study of host factors involved in influenza replication
+    \cite{konig2009human}. For the protein interactions, we ignored
+    interactions where no virus protein was specified.
+
+   \subsection{Peptide motif and SMART domain annotations}
+    Protein sequences form three human interactomes, I2D, STRING, and
+    HPRD, were scanned for peptide motifs and SMART domains. Protein
+    sequences for the STRING and HPRD interactomes were taken from
+    their respective databases. Protein sequences for the I2D network
+    were taken from UniProt. Human proteins were scanned for SMART
+    domains using batch access. Human proteins were annotated with the
+    136 peptide motifs described in the ELM Resource by downloading
+    regular expressions for each motif from the resource, and matching
+    them against all human protein sequences. The networks used in
+    this study were composed of Entrez Gene IDs, and multiple proteins
+    may correspond to one Entrez Gene ID. For peptide motif and SMART
+    domain annotations for each Entrez Gene ID, we averaged the
+    annotations of all the proteins for which it coded.
+
+  %% \subsection{HCV-human interaction predictions}
+  %%   Multiple alignments for HCV proteins F, CORE, E1, E2, NS2, NS3,
+  %%   NS4A, NS4B, NS5A, NS5B, and P7 were obtained from the Los Alamos
+  %%   National Laboratory HCV sequence database
+  %%   (http://hcv.lanl.gov/content/sequence/NEWALIGN/align.html). HCV
+  %%   proteins were annotated with 136 ELMs using regular
+  %%   expressions. For each of the 53 ELMs found to be conserved on at
+  %%   least 90\% of an HCV protein's alignment, we found either a
+  %%   PROSITE domain \cite{hulo08} known to interact with the ELM, or a
+  %%   set of proteins known to interact with the ELM \cite{evans09}. We
+  %%   used the ELM Resource and ScanProsite to annotate proteins from
+  %%   I2D, STRING, and HPRD. Predictions were made using the method
+  %%   described by Evans et al. \cite{evans09}.
+
+%ScanProsite \cite{decastro06}

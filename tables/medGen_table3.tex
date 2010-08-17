@@ -1,0 +1,78 @@
+\begin{table}\footnotesize
+\begin{center}
+  \begin{tabular}{|l|c|c|c|c|}
+  \hline
+  HIV protein & GO HHP & GO HHE & P-value \\
+  \hline
+%CA  &    1410  &  4 & 0.00 \\
+ENV   &  1640  &  347 & 0.00 \\
+GAG  &   1545  &  88 & 0.00 \\
+IN   &   1347 &   44 & 0.99 \\
+MA  &    872  &   45 & 0.00 \\
+%NC  &    7    &   6 & 0.19 \\
+NEF &    1376 &   126 & 0.00 \\
+POL &    1595 &   116 & 0.00 \\
+PR  &    882  &   54 & 0.00 \\
+REV  &   1273 &   35 & 0.00 \\
+RT  &    1517 &   23 & 0.00 \\
+TAT  &   857  &   445 & 0.00 \\
+VIF  &   1397 &   32 & 0.98 \\
+VPR  &   694  &   93 & 0.00 \\
+%VPU  &   124  &   6 & 0.06 \\
+
+%CA & H1 & 0.20 \\
+%CA & 0.00 \\
+%ENV & H1 & 0.00 \\
+%ENV & 0.00 \\
+%GAG & H1 & 0.00 \\
+%GAG & 0.00 \\
+%IN & H1 & 0.76 \\
+%IN & 0.99 \\
+%MA & H1 & 0.00 \\
+%MA & 0.00 \\
+%NC & H1 & 0.44 \\
+%NC & 0.19 \\
+%NEF & H1 & 0.03 \\
+%NEF & 0.00 \\
+%POL & H1 & 0.00 \\
+%POL & 0.00 \\
+%PR & H1 & 0.02 \\
+%PR & 0.00 \\
+%REV & H1 & 0.03 \\
+%REV & 0.00 \\
+%RT & H1 & 0.00 \\
+%RT & 0.00 \\
+%TAT & H1 & 0.00 \\
+%TAT & 0.00 \\
+%VIF & H1 & 0.21 \\
+%VIF & 0.98 \\
+%VPR & H1 & 0.19 \\
+%VPR & 0.00 \\
+%VPU & H1 & 1.00 \\
+%VPU & 0.06 \\
+\hline
+  \end{tabular}
+\end{center}
+\caption[Validation of HIV-human predicted interactions using Gene
+  Ontology biological process similarity]{\small For each HIV protein,
+  we evaluated the performance of our HIV-human interaction
+  predictions (HHP) using Gene Ontology (GO) biological process labels
+  to compare our predicted interactions to experimentally validated
+  interactions. We computed a GO similarity score between predicted
+  and validated protein sets by averaging over all GO similarity
+  scores that resulted from pairwise combinations of proteins taken
+  from the predicted and validated protein sets (see Methods). For
+  each HIV protein, we constructed random HHP sets to use in a
+  permutation test to evaluate the significance of the observed GO
+  similarity between HHP and HHE. We report the p-values for these
+  trials.
+
+%% We further compared our direct predicted interactors (H1) and our
+%% total prediction set (HHP) with the experimentally validated
+%% interctions using GO biological process level 5 terms. For each
+%% prediction and validation set, we calculated the similarity in GO BP 5
+%% annotations, and then used a permutation test with 100 trials to
+%% evaluate the significance of the observed score. We report the
+%% p-values for these trials. 
+\label{tbl:medGen3:GOsim}}
+\end{table}

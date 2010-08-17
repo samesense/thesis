@@ -1,0 +1,102 @@
+
+%--------------------------------------------------------------
+%document header info
+
+   \documentclass[12pt]{report}%{book}
+   \pagestyle{plain}
+
+   \usepackage{PennDiss}
+
+%----------------------From Ted
+\def\abovestrut#1{\rule[0in]{0in}{#1}\ignorespaces}
+ \def\belowstrut#1{\rule[-#1]{0in}{#1}\ignorespaces}
+ \def\abovespace{\abovestrut{0.15in}}
+ \def\belowspace{\belowstrut{0.10in}}
+ \def\aroundspace{\abovestrut{0.15in}\belowstrut{0.15in}}
+
+ \usepackage{amsmath}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+ \usepackage{hyperref}
+ \usepackage{acronym}
+
+ \usepackage[numbers,square,sort]{natbib}
+ %\usepackage{natbib}
+
+% \usepackage[draft]{graphicx} % more modern
+ \usepackage[]{graphicx} % more modern
+
+ \usepackage[all]{xy}
+ \CompileMatrices
+
+ \usepackage[verbose]{wrapfig}
+ \usepackage{subfigure}
+  %----------------------End Ted
+
+  \begin{document}
+
+
+%----------------------------------------------------------------------------
+%body of document
+
+  \pagenumbering{roman}
+  \clearpage
+
+  \title{Modeling virus-host networks}
+
+  \author{Perry Evans}
+  \date{August 29, 2010}
+
+  \dept{Genomics and Computational Biology}
+  \supervisor{Lyle Ungar}
+  \groupchair{Maja Bucan}
+
+  \submitdate{August 29, 2010}
+  %\copyrightyear{2010}
+
+  \beforepreface
+  \prefacesection{Acknowledgements}
+  \input{diss_acknowledgements}
+
+  \clearpage
+  \abstractp
+
+  \input{diss_abstract}
+
+  \clearpage
+  %\copyrighttrue
+  %\copyrightpage %generates copyright page
+
+  \tableofcontents
+
+  \tablespagetrue
+  \listoftables
+  \figurespagetrue
+  \listoffigures
+
+\input{terms}
+
+  \clearpage
+  \pagenumbering{arabic}
+
+%...
+  \input{diss_intro}
+  \chapter{Prediction of HIV virus-host protein interactions using virus and host sequence motifs} \label{chapter:predict}
+  \input{predict}
+\chapter{A bioinformatics approach reveals possible MAPK docking motifs on HIV proteins} \label{chapter:mapk}
+  \input{mapk}
+  \chapter{Modularity in protein interaction network hubs predicts viral host-pathogen interactions} \label{chapter:hubs}
+  \input{hubs} 
+\input{diss_conclusion}
+
+  \appendix
+  \input{diss_appendix}
+%...
+
+
+%---------------------------------------------------------------------------
+%bibliography stuff
+  \bibliographystyle{plain}
+  \bibliography{thesis}
+
+\end{document}
