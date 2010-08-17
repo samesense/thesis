@@ -293,7 +293,7 @@ HIV genetic screens focused on host dependency factors, some HCV siRNA
 screens looked for host factors that when knocked down caused an
 increase in virus replication. These were likely host genes that were
 part of the immune response. One such screen identified twenty five
-such genes \cite{Li09}.
+immune response genes \cite{Li09}.
 
 \subsubsection{Influenza-human interactions}
 
@@ -309,7 +309,7 @@ for influenza replication \cite{konig2009human}. A more detailed study
 extensively catalogued three types of interactions between host and
 virus: protein-protein, host gene expression response, and siRNA
 screens \cite{shapira2009physical}. Like the HCV siRNA data, this
-study looked at both positive and negative virus response to host
+study looked at both positive and negative virus response to host gene
 knock down, providing lists of necessary host factors and possible
 immune response genes. Analysis of the data revealed many aspects of
 the host immune system to interact with the virus.
@@ -323,12 +323,12 @@ function \cite{calderwood07}, help design antiviral therapies
 experiments \cite{jansen2003bayesian,lee2004probabilistic}, and
 compare the ways in which viruses alter host cellular pathways
 \cite{navratil-system}. Each interaction abstraction has yielded
-important insights. Protein level studies often describe binding site
+important insights. Protein level studies often describe binding sites
 on both virus and host proteins. Pathway level studies have revealed
 subsets of human proteins that are likely to interact with virus
 proteins. These studies can be used as a guide for more detailed
-experiments as the protein level, and to compare virus-host protein
-integrations in terms of biological processes instead of individual
+experiments at the protein level, and to compare virus-host protein
+interactions in terms of biological processes instead of individual
 proteins. Network level studies have allowed viruses to be compared to
 find trends common to infection.
 
@@ -355,17 +355,17 @@ The bulk of HIV protein interactions has come from collections of
 single protein studies \cite{mendez2010global, chatr08, ptak08,
   driscoll2009pig}. In addition to helping to build the HIV-human
 protein interaction network, these individual interaction studies have
-given insights into how virus-host interactions occur. It is now
-proposed that binding between host and virus proteins occurs between
-short peptide motifs on virus proteins, and protein domains on human
-proteins \cite{tonikian08,shelton08,kadaveru08}. Figure
+given insights into how virus-host protein interactions occur. It is
+now proposed that binding between host and virus proteins occurs
+between short peptide motifs on virus proteins, and protein domains on
+human proteins \cite{tonikian08,shelton08,kadaveru08}. Figure
 \ref{fig:intro:nef} shows some motifs on the HIV NEF protein. Each
 motif is associated with a domain or set of proteins that interact
 with it. A database of host peptide motifs and the domains that
 interact with them exists at the Eukaryotic Linear Motif (ELM)
 Resource \cite{puntervoll03}. The ELM Resource has catalogued over 130
 of these peptide motifs and constructed a pattern that matches each
-one using documented motif instances from the literature.  Work with
+one using documented motif instances from the literature. Work with
 binding regions on virus and host proteins has been hampered by a
 disconnect between the eukaryotic work done with peptide motifs and
 the study of virus-host interactions. In this dissertation, we combine
@@ -408,7 +408,7 @@ but at the pathway level results became more consistent
 signaling, estrogen-receptor signaling, peroxisome
 proliferator-activated receptor signaling, RAR activation, and caspase
 apoptosis routes \cite{yeung09}. Similarly, pathway analysis of siRNA
-screens in HCV and other Flaviviridae virus identified TGF$\beta$,
+screens in HCV and other Flaviviridae viruses identified TGF$\beta$,
 ErbB, MAPK, focal adhesion, and ubiquitin-mediated proteolysis as
 common Flaviviridae virus pathways \cite{Li09}. Influenza virus, HIV,
 EBV, and KSHV, have also been found to target similar immune response
@@ -475,16 +475,16 @@ network was searched for motifs that might aid the virus in taking
 control of the host cell.
 
 Virus-host networks have also been used to achieve a more biological
-understanding of interactions. A combined study of HIV siRNA screens
-and the host protein interaction network clustered the virus targeted
-host network into dense network neighbor hoods. Analysis revealed
-these neighborhoods to represent proteasome, mediator, RNA binding and
-splicing, and chaperone network components \cite{bushman09}. With a
-similar goal in mind, an influenza virus-host network that included
-virus-host protein interactions, siRNA screen results, and host
-expression response to infection was analyzed to determine which
-interactions could be attributed to the host immune system
-\cite{shapira2009physical}.
+understanding of virus-host interactions. A combined study of HIV
+siRNA screens and the host protein interaction network clustered the
+virus targeted host network into dense network neighbor
+hoods. Analysis revealed these neighborhoods to represent proteasome,
+mediator, RNA binding and splicing, and chaperone network components
+\cite{bushman09}. With a similar goal in mind, an influenza virus-host
+network that included virus-host protein interactions, siRNA screen
+results, and host expression response to infection was analyzed to
+determine which interactions could be attributed to the host immune
+system \cite{shapira2009physical}.
 
 In a study of the network properties of pathogen targeted proteins it
 was determined that pathogens like HIV and EBV have proteins that
@@ -495,7 +495,7 @@ to be preferentially targeted by pathogen proteins \cite{dyer08}. A
 later topological analysis of the HCV-human interaction network
 revealed that HCV proteins also preferred to interact with human hub
 and bottleneck proteins \cite{dechassey08}. It has been suggested that
-hubs are targeted by viruses because hubs provide an efficient way to
+hubs are targeted by viruses because they provide an efficient way to
 rewire the host network to favor virus production
 \cite{calderwood07}. In this dissertation, we address the virus hub
 preference, and suggest a biological reason behind it.
@@ -523,7 +523,7 @@ i.e.\ the number of host proteins that interact with a candidate host
 protein. This finding was consistent with other work done with viruses
 and host hub proteins, but had the unfortunate effect of predicting
 that all viruses will interact with the same host proteins. Another
-HIV-human protein interaction prediction method used structural
+HIV-human protein interaction prediction study used structural
 similarity between host and virus proteins
 \cite{doolittle2010structural}. For each HIV protein with an available
 structure, the most structurally similar host proteins were found. The
