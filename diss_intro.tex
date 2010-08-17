@@ -86,7 +86,7 @@ taking pairs of human proteins that may interact via a peptide motif
 conserved in HIV and the corresponding interacting protein domain. Our
 predictions are enriched with host proteins known to interact with HIV
 proteins Env, Nef, and Tat (p-value $<$ 4.26e-21). Cellular pathways
-statistically enriched for our predictions include the T cell receptor
+statistically enriched for our predictions include the T-cell receptor
 signaling, natural killer cell mediated cytotoxicity, cell cycle, and
 apoptosis pathways. Molecular functions enriched with both predicted
 and confirmed HIV targeted proteins include phosphorylation and adenyl
@@ -112,10 +112,17 @@ the sequences gathered for HIV proteins known to be phosphorylated by
 ERK1 and ERK2. We revise the consensus MAPK docking pattern in order
 to provide patterns that annotate that the majority of sequences for
 all HIV proteins. One revision is based on a documented human variant
+<<<<<<< HEAD
 of the consensus MAPK docking motif, and the other reduces the number
 of required basic amino acids in the consensus docking motif from two
 to one. The proposed patterns are shown to be consistent with in
 silico docking between ERK1 and the HIV matrix protein. The motif
+=======
+of one of the consensus MAPK docking motif, and the other reduces the
+number of required basic amino acids in the consensus docking motif
+from two to one. The proposed patterns are shown to be consistent with
+\textit{in silico} docking between ERK1 and the HIV matrix protein. The motif
+>>>>>>> 29b187eb64d15c5b209836a8bb2c60662cd7db3e
 usage on HIV proteins is sufficiently different from human proteins in
 amino acid sequence similarity to allow for HIV specific targeting
 using small-molecule drugs.
@@ -165,7 +172,7 @@ different versions of peptide motifs based on which host it infects.
 
 While single species protein-protein interaction networks have been
 gathered in high throughput screens and studied for ten years,
-virus-host networks are just beginning to be investigated
+virus-host networks are only recently the subject of investigation
 \cite{mendez2010global}. Large scale studies of virus-host
 interactions have focused on HIV, HCV, and the influenza virus.
 Smaller studies have been conducted for Epstein-Barr virus (EBV)
@@ -209,7 +216,7 @@ them.
   Nature Publishing Group. \label{fig:hiv_proteins}}
 \end{figure}
 
-HIV is an RNA virus of roughly nine kb encoding nine open reading
+HIV is an RNA virus of roughly nine kilobases encoding nine open reading
 frames that produce around twenty proteins (Figure
 \ref{fig:hiv_proteins}) \cite{frankel2003hiv}. There are different
 subtypes, or strains, of HIV, and these are classified hierarchically,
@@ -228,7 +235,7 @@ present in at least 2.5\% of the world population \cite{taylor08}.
 Interactions between human proteins and HIV proteins come mostly from
 literature curation rather than high throughput binding
 assays. Interactions between HIV and human proteins have been
-catalogued in VirusMINT \cite{chatr08} the NCBI HIV-Human Protein
+cataloged in VirusMINT \cite{chatr08} the NCBI HIV-Human Protein
 Interaction Database \cite{ptak08}, and the pathogen interaction
 gateway (PIG) \cite{driscoll2009pig}. From these databases, it has
 been observed that HIV proteins interact with many of the same host
@@ -241,7 +248,7 @@ cleavage. In HIV-human interaction databases, the number of human
 proteins involved in indirect virus-host interactions is roughly twice
 the number that are involved in direct interactions \cite{fu09}.
 
-Not all of these interactions will occur in vivo, or be relevant to
+Not all of these interactions will occur \textit{in-vivo}, or be relevant to
 HIV infection. Direct interactions pertinent to infection can be found
 by comparing these protein interaction databases to siRNA screens for
 host factors involved in HIV replication. Four large such screens,
@@ -306,7 +313,7 @@ recent studies have tried to pin down the human pathways and genes
 involved in influenza A infection. A genome-wide siRNA screen in cells
 infected with influenza A virus identified 295 host factors required
 for influenza replication \cite{konig2009human}. A more detailed study
-extensively catalogued three types of interactions between host and
+extensively cataloged three types of interactions between host and
 virus: protein-protein, host gene expression response, and siRNA
 screens \cite{shapira2009physical}. Like the HCV siRNA data, this
 study looked at both positive and negative virus response to host gene
@@ -355,15 +362,23 @@ The bulk of HIV protein interactions has come from collections of
 single protein studies \cite{mendez2010global, chatr08, ptak08,
   driscoll2009pig}. In addition to helping to build the HIV-human
 protein interaction network, these individual interaction studies have
+<<<<<<< HEAD
 given insights into how virus-host protein interactions occur. It is
 now proposed that binding between host and virus proteins occurs
 between short peptide motifs on virus proteins, and protein domains on
 human proteins \cite{tonikian08,shelton08,kadaveru08}. Figure
 \ref{fig:intro:nef} shows some motifs on the HIV NEF protein. Each
+=======
+given insights into how virus-host interactions occur. It is now
+proposed that binding between host and virus proteins occurs between
+short peptide motifs on virus proteins, and protein domains on human
+proteins \cite{tonikian08,shelton08,kadaveru08}. Figure
+\ref{fig:intro:nef} shows selected motifs on the HIV NEF protein. Each
+>>>>>>> 29b187eb64d15c5b209836a8bb2c60662cd7db3e
 motif is associated with a domain or set of proteins that interact
 with it. A database of host peptide motifs and the domains that
 interact with them exists at the Eukaryotic Linear Motif (ELM)
-Resource \cite{puntervoll03}. The ELM Resource has catalogued over 130
+Resource \cite{puntervoll03}. The ELM Resource has cataloged over 130
 of these peptide motifs and constructed a pattern that matches each
 one using documented motif instances from the literature. Work with
 binding regions on virus and host proteins has been hampered by a
@@ -427,11 +442,11 @@ interferon response revealed that virus proteins from four viral
 families (Flaviviridae, Herpesviridae, Papillomaviridae, and
 Retroviridae) targeted different aspects of the response, which
 consists of a four level cascade of interactions traveling from host
-receptors, to adaptors and mediators, and ending at transcription
+receptors, to adapters and mediators, and ending at transcription
 factors that initiate the immune response
 \cite{navratil-system}. Viruses in the Flaviviridae and Herpesviridae
 families targeted host proteins with many host interactions in the
-interferon pathway, focusing on protein adaptors, mediators, and
+interferon pathway, focusing on protein adapters, mediators, and
 transcription factors. Viruses in the Retroviridae and
 Papillomaviridae families mostly targeted transcription factors.
 
